@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body    {
+    font-family: 'Raleway', sans-serif;
+    background: hsl(229, 57%, 11%);
+    background-image: url("/images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom; 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+  p{
+    font-size: 14px;
+    color: #ffffffc0;
+  }
+
+  /* Work from here */
+  section {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  transform: translate(-50%, -80%);
+  gap: 30px;
+  }
+
+ .logos-container {
+    
+    background: hsl(228, 56%, 26%);
+     width: 190px;
+     height: 100px;
+     padding: 20px;
+    border-radius: 5px 50px 5px 5px;
+  }
+  .logo>img {
+    width: 80px;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* align-items: center; */
+  }
+
+ 
+  .files {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    background: hsl(229, 57%, 11%);
+    border-radius: 5px;
+    
+  }
+
+  /* Progress tab */
+
+  .progess-bar {
+    background: hsl(228, 56%, 26%);
+    height: 70px;
+     width: 400px;
+     padding: 20px;
+    border-radius:5px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .progress {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 390px;
+    height: 15px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 50px;
+  }
+  .bar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 300px;
+    height: 13px;
+    border-radius: 50px;
+    background-image:linear-gradient(to right, #ffa399 0%, #ff4d97 100%);
+  }
+  .circle {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+  }
+  .bold {
+    font-weight: 700;
+    color: white;
+  }
+
+  .size {
+    display: flex;
+    justify-content: space-between;
+  }
+ /* pOPUP */
+ .left-message {
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 7px;
+    position: absolute;
+    top: 40%;
+    left: 66%;
+    transform: translate(-50%, -80%);
+    z-index: 2;
+ }
+ .extra-bold {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+    
+ }
+
+ .left-message>p {
+    color: rgba(0, 0, 0, 0.668);
+ }
+
+.ribbon {
+    width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid #ffffff;
+	border-bottom: 35px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: 42%;
+    left: 68.35%;
+    transform: translate(-50%, -80%);
+    z-index: 1;
+      
+}
+
+/* Responsive */
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url("/images/bg-mobile.png");
+        background-position: right top;
+        background-size:cover; 
+       }
+    section {
+        flex-direction: column;
+    }
+
+    .logo>img {
+    width: 120px;
+    }
+    .files>img {
+        width: 30px;
+    }
+    
+    .icons {
+        gap: 20px
+    }
+    .logos-container{
+    width: 280px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    }
+
+    .progess-bar {
+        width: 280px;
+        height: 100px;
+        margin-top: 270px;
+    }
+    .progress {
+        width: 280px;
+    }
+    .left-message {
+    position: fixed;
+    top: 67%;
+    left: 50%;
+    width: 130px;
+    height: 40px;
+    }
+    .bar {
+        width: 200px;
+    }
+    .consume-message {
+        text-align: center;
+    }
+    .ribbon {
+        display: none;
+    }
+
+
+}
